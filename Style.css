@@ -1,0 +1,232 @@
+/* General Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e9f5f5 0%, #fdefff 100%);
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3d5af1;
+  padding: 1em 2em;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(61, 90, 241, 0.08);
+}
+nav .brand {
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+nav .nav-auth {
+  font-size: 1em;
+}
+
+/* Main Container */
+main {
+  max-width: 540px;
+  margin: 2.2em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px 0 rgba(61, 90, 241, 0.09),
+    0 2px 4px 0 rgba(61, 90, 241, 0.07);
+}
+
+.auth-section, .app-section {
+  min-height: 380px;
+}
+
+/* Auth Card */
+.auth-card {
+  background: #f0f5fc;
+  border-radius: 12px;
+  padding: 2em 2em 1em 2em;
+  box-shadow: 0 2px 8px 0 rgba(102, 153, 255, 0.08);
+}
+
+.auth-card h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.9em;
+  color: #3d5af1;
+}
+
+.input-group {
+  margin-bottom: 1.3em;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+.input-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 7px;
+  transition: border-color 0.2s;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #3d5af1;
+}
+
+.auth-btn-row {
+  display: flex;
+  justify-content: space-between;
+}
+.auth-btn-row button {
+  width: 48%;
+  font-size: 1em;
+  padding: 8px;
+  border: none;
+  border-radius: 7px;
+  background: #3d5af1;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.auth-btn-row button:hover {
+  background: #1836a5;
+}
+.msg {
+  min-height: 1.5em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-style: italic;
+}
+
+.success { color: #209044; }
+.error { color: #c50e3a; }
+
+.search-bar {
+  margin: 1.2em 0 1.7em 0;
+  display: flex;
+  gap: 0.7em;
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 7px 10px;
+  border: 1.5px solid #b5d0f9;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.search-bar input:focus {
+  border-color: #3d5af1;
+  box-shadow: 0 1px 4px #b5d0f9;
+}
+.btn, .btn-primary, .btn-danger {
+  padding: 7px 16px;
+  background: #3d5af1;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 2px;
+  transition: background 0.18s;
+}
+.btn:hover, .btn-primary:hover {
+  background: #203aad;
+}
+.btn-danger {
+  background: #db2c4d;
+}
+.btn-danger:hover {
+  background: #8a1431;
+}
+
+#booksList hr {
+  border: 0;
+  border-top: 1.3px solid #e4e4f7;
+  margin: 14px 0 10px 0;
+}
+
+.book-card {
+  background: #eaf1fd;
+  padding: 1em 1.5em;
+  margin-bottom: 12px;
+  border-radius: 9px;
+  transition: transform 0.15s;
+  box-shadow: 0 1px 8px 0 rgba(61,90,241,0.05);
+}
+.book-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 6px 24px 0 rgba(61,90,241,0.075);
+}
+.book-meta {
+  font-size: 0.99em;
+  color: #555;
+}
+.book-actions {
+  margin-top: 0.6em;
+}
+.book-actions button {
+  padding: 5px 13px;
+  font-size: .98em;
+}
+
+#bookDetail {
+  margin-top: 2.1em;
+  margin-bottom: .2em;
+  background: #f3fdf6;
+  padding: 1.1em 1.2em;
+  border-radius: 9px;
+  box-shadow: 0 1px 6px #e4ffe9b3;
+}
+
+#reviewsList {
+  margin: 1em 0;
+}
+
+.review-item {
+  background: #f9e3ec;
+  padding: 0.7em 1em;
+  border-radius: 7px;
+  margin-bottom: 8px;
+  color: #5b2340;
+  font-size: 1.03em;
+}
+.review-author {
+  font-weight: 600;
+  color: #2b294e;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+#reviewForm {
+  border-top: 2px solid #e7e7ff;
+  margin-top: 1.1em;
+  padding-top: 1em;
+}
+#reviewText {
+  width: 100%;
+  border-radius: 7px;
+  border: 1.3px solid #bdbdfc;
+  padding: 8px;
+  font-size: 1em;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+.review-btn-row {
+  display: flex;
+  gap: 1.2em;
+}
+.hidden { display: none !important; }
+.review-btn-row button {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 7px;
+  border: none;
+  color: #fff;
+}

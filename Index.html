@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Review App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="brand">Book Review</div>
+    <div class="nav-auth" id="nav-auth"></div>
+  </nav>
+  <main>
+    <!-- Auth Panel -->
+    <section class="auth-section" id="auth-section">
+      <div class="auth-card">
+        <h2>Welcome</h2>
+        <form id="auth-form" autocomplete="off">
+          <div class="input-group">
+            <label>Username</label>
+            <input id="username" type="text" required>
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input id="password" type="password" required>
+          </div>
+          <div class="auth-btn-row">
+            <button type="button" onclick="register()">Register</button>
+            <button type="button" onclick="login()">Login</button>
+          </div>
+        </form>
+        <div class="msg" id="authMsg"></div>
+      </div>
+    </section>
+    <!-- Main App Panel -->
+    <section class="app-section hidden" id="app-section">
+      <div class="search-bar">
+        <input type="text" id="searchValue" placeholder="Search by ISBN, Title, or Author">
+        <button class="btn" onclick="searchBooks()">Search</button>
+        <button class="btn" onclick="listBooks()">Show All</button>
+      </div>
+      <div id="booksList"></div>
+      <div id="bookDetail"></div>
+      <div id="reviewsList"></div>
+      <div id="reviewForm" class="hidden">
+        <h3>Add / Modify Your Review</h3>
+        <textarea id="reviewText" rows="3" placeholder="Write your review..."></textarea><br>
+        <div class="review-btn-row">
+          <button class="btn-primary" onclick="submitReview()">Submit</button>
+          <button class="btn-danger" onclick="deleteReview()">Delete My Review</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
